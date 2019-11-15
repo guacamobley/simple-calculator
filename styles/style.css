@@ -1,0 +1,95 @@
+*{
+	box-sizing: border-box;
+}
+
+#calculator-grid{
+	display: grid;
+	position: absolute;
+	top:50px;
+	left: 0px;
+	right: 0px;
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	align-items: stretch;
+	justify-items: stretch;
+	grid-template-rows: 2fr repeat(5,3fr);
+	grid-template-columns: repeat(5,1fr);
+	grid-template-areas:  	"display display display display"
+							"clr clr del div" 
+							"N7  N8  N9  mul" 
+							"N4  N5  N6  sub" 
+							"N1  N2  N3  add" 
+							"N0  N0 dec  equ";
+	}
+
+
+.operator, .execute, .delete,.clear{
+	background-color: thistle;
+}
+
+.number,.decimal{
+	background-color: #7FFFD4;
+
+}
+
+button:hover{
+	transform: scale(1.1);	
+}
+
+.execute{
+
+
+}
+
+
+.clear{
+
+}
+
+#calculator-grid button{
+	width: 100%;
+	height: 100%;
+	align-self: stretch;
+	font-size: 16px;
+	border: solid;
+	border-color:darkgray;
+	border-width:1px;
+
+}
+
+#display{
+	border:solid;
+	border-width: 1px;
+	margin: 5px;
+	justify: center; s
+}
+
+:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.operator:disabled{
+	transform: scale(1.0);
+	background-color:white;
+}
+
+.execute:disabled{
+	transform: scale(1.0);
+	background-color:white;
+}
+
+.decimal:disabled{
+	transform: scale(1.0);
+	opacity: 0.3;
+	background-color:white;
+}
+
+.delete:disabled{
+	transform: scale(1.0);
+	background-color:white;
+}
+
+.clear:disabled {
+	transform: scale(1.0);
+	background-color:white;
